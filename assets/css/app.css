@@ -1,124 +1,123 @@
 html,body{
-  height: 100%;
-  margin: 0%;
-}
-
-.header { 
-  /*background: linear-gradient(rgb(37, 37, 37) 80%,white);*/
-  background: rgb(49, 49, 49);
-  color: white;
-  font-size: 32px;
-  padding: 5px 0px 13px 50px;
-  border-bottom-style: solid;
-  border-bottom-color: rgb(83, 82, 82);
-  border-width: 5px;
-}
-
-.dropdown{
-  display: inline;
-}
-.lead{
-  color: orange;
-}
-
-.navbar {
-  margin-bottom: 0;
-}
-
-body {
-  background: url("../images/test1.jpg") no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-
-
-}
-.jumbotron {
-  padding-top: 6rem;
-  padding-bottom: 6rem;
-  margin-bottom: 0;
-  background-color: #fff;
-  background: url("../images/test1.jpg") no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-
-.jumbotron p:last-child {
-  margin-bottom: 0;
-}
-
-.jumbotron-heading {
-  font-weight: 300;
-}
-
-.jumbotron .container {
-  max-width: 40rem;
-}
-.form-group {
-    float: right;
-    clear: both;
-    margin-left: -10px; 
-}
-
-.container-2 {
-  max-width: 41rem;
-  position: center;
-  margin: auto;
-  margin-top: auto;
-  border-style: solid;
-  border-color: white;
-  border-radius: 10px;
-  box-shadow: 0 15px 12px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(248, 245, 245, 0.19); 
-  text-align: center;
-  padding-bottom: 30px;
-  padding-top: 20px;
-  background-color: white;
-}
-
-.container-3 {
-  max-width: 15rem;
-  margin-top: -400px;
-  margin-left: -18px;
-  position: right;
-  border-style: solid;
-  border-color: white;
-  border-radius: 10px;
-  box-shadow: 0 15px 12px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(248, 245, 245, 0.19); 
-  text-align: center;
-  padding-bottom: 20px;
-  padding-top: 10px;
-  background-color: white;
-}
-
-.h3-browse {
-    text-align: left;
-    font-size: 20px;
-}
-
-#footer {
-  background-color: rgb(49, 49, 49);
-  padding-top: 1%;
-  position: fixed;;
-  text-align: center;
-  color: white;  
-  border-top-style: solid;
-  border-top-color: rgb(83, 82, 82);
-  border-width: 5px;
-}
-
-footer p {
-  position: relative;
-  text-align: center;
-}
-
-.footer { 
+    height: 100%;
+    margin: 0%;
+  }
+  
+  .header { 
+    background: rgb(49, 49, 49);
+    color: white;
+    font-size: 32px;
+    padding: 5px 0px 13px 50px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(83, 82, 82);
+    border-width: 5px;
+  }
+  
+  .dropdown{
+    display: inline;
+  }
+  .lead{
+    color: orange;
+  }
+  
+  .navbar {
+    margin-bottom: 0;
+  }
+  
+  body {
+    background: url("../images/test1.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  
+  
+  }
+  .jumbotron {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    margin-bottom: 0;
+    background-color: #fff;
+    background: url("../images/test1.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+  
+  .jumbotron p:last-child {
+    margin-bottom: 0;
+  }
+  
+  .jumbotron-heading {
+    font-weight: 300;
+  }
+  
+  .jumbotron .container {
+    max-width: 40rem;
+  }
+  .form-group {
+      float: right;
+      clear: both;
+      margin-left: -10px; 
+  }
+  
+  .container-2 {
+    max-width: 41rem;
+    position: center;
+    margin: auto;
+    margin-top: auto;
+    border-style: solid;
+    border-color: white;
+    border-radius: 10px;
+    box-shadow: 0 15px 12px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(248, 245, 245, 0.19); 
     text-align: center;
-}
-
-#mapid { 
-  height: 180px; 
-  margin: 20px;
-}
+    padding-bottom: 30px;
+    padding-top: 20px;
+    background-color: white;
+  }
+  
+  .container-3 {
+    max-width: 15rem;
+    margin-top: -400px;
+    margin-left: -18px;
+    position: right;
+    border-style: solid;
+    border-color: white;
+    border-radius: 10px;
+    box-shadow: 0 15px 12px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(248, 245, 245, 0.19); 
+    text-align: center;
+    padding-bottom: 20px;
+    padding-top: 10px;
+    background-color: white;
+  }
+  
+  .h3-browse {
+      text-align: left;
+      font-size: 20px;
+  }
+  
+  #footer {
+    background-color: rgb(49, 49, 49);
+    padding-top: 1%;
+    position: fixed;;
+    text-align: center;
+    color: white;  
+    border-top-style: solid;
+    border-top-color: rgb(83, 82, 82);
+    border-width: 5px;
+  }
+  
+  footer p {
+    position: relative;
+    text-align: center;
+  }
+  
+  .footer { 
+      text-align: center;
+  }
+  
+  #mapid { 
+    height: 180px; 
+    margin: 20px;
+  }

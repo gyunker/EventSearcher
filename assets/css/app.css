@@ -26,7 +26,7 @@ html,body{
 }
 
 body {
-  background: url("/Users/shoaibnaeem93/Desktop/test1.jpg") no-repeat center center fixed;
+  background: url("/Users/shoaibnaeem93/Desktop/Homework/EventSearcher/assets/images/test1.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -39,7 +39,7 @@ body {
   padding-bottom: 6rem;
   margin-bottom: 0;
   background-color: #fff;
-  background: url("/Users/shoaibnaeem93/Desktop/test1.jpg") no-repeat center center fixed;
+  background: url("/Users/shoaibnaeem93/Desktop/Homework/EventSearcher/assets/images/test1.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -60,7 +60,7 @@ body {
 .form-group {
     float: right;
     clear: both;
-    margin-left: -100px; 
+    margin-left: -80px; 
 }
 
 .container-2 {

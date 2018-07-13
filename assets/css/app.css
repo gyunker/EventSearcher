@@ -60,11 +60,11 @@ body {
 .form-group {
     float: right;
     clear: both;
-    margin-left: -80px; 
+    margin-left: -10px; 
 }
 
 .container-2 {
-  max-width: 50rem;
+  max-width: 41rem;
   position: center;
   margin: auto;
   margin-top: auto;
@@ -75,6 +75,21 @@ body {
   text-align: center;
   padding-bottom: 30px;
   padding-top: 20px;
+  background-color: white;
+}
+
+.container-3 {
+  max-width: 15rem;
+  margin-top: -400px;
+  margin-left: -18px;
+  position: right;
+  border-style: solid;
+  border-color: white;
+  border-radius: 10px;
+  box-shadow: 0 15px 12px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(248, 245, 245, 0.19); 
+  text-align: center;
+  padding-bottom: 20px;
+  padding-top: 10px;
   background-color: white;
 }
 

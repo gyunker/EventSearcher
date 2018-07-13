@@ -72,19 +72,29 @@
         </div>
 
         <div class="form-group"> 
-              <div class="col-md-10 inputGroupContainer">
-              <div class="input-group">
-                  <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-            <input name="zip" placeholder="Zip Code" class="form-control"  type="text">
-              </div>
-          </div>
-      </div>
-
+          <div class='searchContainer'>
+            <input id="query" type="text" placeholder='Enter Zip Code'></input>
+            
+            <button id="search">GO</button>
+            </div>
+      
+        </div>
+        <!-- This is the div for the leaflet map -->
       <div id="mapid"></div>
 
-    </div>
-   
+      </div>
+      
+        </div>
+        </div>
 
+
+      <div class= "col-md-4 container-3">
+        Weather Forecast
+        <div id="weatherResults"></div>
+      </div>
+
+
+   
     </section>
     <div class="fixed-bottom" id="footer">
     <footer class="footer">
@@ -94,23 +104,11 @@
       </footer>
     </div>
   
-      <!-- Bootstrap core JavaScript
-      ================================================== -->
-      <!-- Placed at the end of the document so the pages load faster -->
-
-
-      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
-      <script>
-        $(function () {
-          Holder.addTheme("thumb", { background: "#55595c", foreground: "#eceeef", text: "Thumbnail" });
-        });
-      </script>
-      <script src="../../dist/js/bootstrap.min.js"></script>
-      <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-      <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
-    
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="assets/js/app.js"></script>
   
   <svg xmlns="http://www.w3.org/2000/svg" width="156" height="280" viewBox="0 0 156 280" preserveAspectRatio="none" style="display: none; visibility: hidden; position: absolute; top: -100%; left: -100%;"><defs><style type="text/css"></style></defs><text x="0" y="14" style="font-weight:bold;font-size:14pt;font-family:Arial, Helvetica, Open Sans, sans-serif">156x280</text></svg></body>
   <script src ='assets/js/app.js'></script>

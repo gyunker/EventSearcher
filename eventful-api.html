@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Eventful API</title>
+</head>
+
+<body>
+  <div class="name"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript">
+    var APIKey = "pWNMRCZCjh9HB4nj";
+    var keyword ="Crypto";
+    var pageNumber = 1;
+    var pageSize = 6;
+    var zipcode = "San Francisco";
+    var date = "Future"
+    var queryURL = "https://api.eventful.com/json/events/search?app_key=" + APIKey+ 
+      "&keywords=" + keyword +
+      "&page_number=" + pageNumber +
+      "&date=" + date +
+      "&page_size=" + pageSize+
+      "&location=" + zipcode;
+
+    $.ajax({
+      url: "https://safe-headland-27088.herokuapp.com/" + queryURL,
+      method: "GET",
+      "async" : true,
+      "crossDomain" : true
+    }).then(function(response) {
+  
+    var results = JSON.parse(response);
+     console.log(results);
+
+    $(".name").html("<h2> Event: " + results.events.event[0].title + "</h2>"+
+    "<h4> Description: " + results.events.event[0].description + "</h4>"+
+    "<h4> City: " + results.events.event[0].city_name + "</h4>"+
+    "<br>"+
+    
+    "<h2> Event: " + results.events.event[1].title + "</h2>"+
+    "<h4> Description: " + results.events.event[1].description + "</h4>"+
+    "<h4> City: " + results.events.event[1].city_name + "</h4>"+
+    "<br>"+
+
+    "<h2> Event: " + results.events.event[2].title + "</h2>"+
+    "<h4> Description: " + results.events.event[2].description + "</h4>"+
+    "<h4> City: " + results.events.event[2].city_name + "</h4>"
+    );
+
+  
+    // var results = JSON.parse(response);
+    //  console.log(results);
+
+    // function renderEvents() {
+
+    // $("#name").empty();
+
+    // for (var i = 0; i < 6; i++) {
+    //     var a = ("<h2> Event: " + results.events.event[i].title + "</h2>");
+    //     $("#name").append(a);
+    //    };
+    //   };
+
+    // renderEvents();
+
+    });
+  </script>
+
+</body>
+
+</html>

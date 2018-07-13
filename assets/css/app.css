@@ -103,3 +103,7 @@ footer p {
     text-align: center;
 }
 
+#mapid { 
+  height: 180px; 
+  margin: 20px;
+}

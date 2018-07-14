@@ -19,12 +19,22 @@ var queryURL = 'http://api.openweathermap.org/data/2.5/weather?zip=';
             var APIKey = '&units=imperial&APPID=8ad513190a2f28456f8d69724674498c';
 
 
-//Values from home page drop down
-//Code needs to be updated to record "On Change" events.. google it.
-var categoryValue = $('#category').val(); 
-var zipcodeValue = $('#query').val();
-// var dateValue = $('#start_date').val();
-console.log(categoryValue + zipcodeValue);
+//Values from home page dropdown
+categoryValue = "";
+$('.catVal').on('click', function(event){
+	console.log(event);
+    categoryValue = $(this).text();
+    console.log("Category = " + categoryValue);
+});
+
+
+var zipcodeValue = "";
+$('#query').on('change', function(event){
+    zipcodeValue = $(this).val();
+	console.log(event);
+	console.log("Zipcode = " + zipcodeValue);
+});
+
 
 //Eventful API logic
 var APIKey = "pWNMRCZCjh9HB4nj";

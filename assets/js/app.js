@@ -91,7 +91,9 @@ var searchWeather = function(zip){
 		error: function(data){
 			console.log("error");
 			console.log(data.status);
-			alert("Please enter a valid zip code");
+			/*alert("Please enter a valid zip code");*/
+			$('#myModal').modal('show');
+			
 		},
 		success: function(data){
 			console.log("success");

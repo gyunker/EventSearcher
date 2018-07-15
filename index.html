@@ -44,12 +44,12 @@
             Category
           </button>
           <div class="dropdown-menu" aria-labelledby="category">
-            <a class="dropdown-item" href="#">Mixology</a>
-            <a class="dropdown-item" href="#">Concert</a>
-            <a class="dropdown-item" href="#">Cooking</a>
-            <a class="dropdown-item" href="#">Sports</a>
-            <a class="dropdown-item" href="#">Paintball</a>
-            <a class="dropdown-item" href="#">Go Kart</a>
+            <a class="dropdown-item catVal" href="#">Mixology</a>
+            <a class="dropdown-item catVal" href="#">Concert</a>
+            <a class="dropdown-item catVal" href="#">Cooking</a>
+            <a class="dropdown-item catVal" href="#">Sports</a>
+            <a class="dropdown-item catVal" href="#">Paintball</a>
+            <a class="dropdown-item catVal" href="#">Go Kart</a>
           </div>
          </div>
 
@@ -65,7 +65,7 @@
             </div>
         </div>
 
-        <div class="dropdown show">
+        <!-- <div class="dropdown show">
             <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="price" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               $-$$$$
             </a>
@@ -76,7 +76,7 @@
               <a class="dropdown-item" href="#">Between $200-$500</a>
               <a class="dropdown-item" href="#"> More Than $500</a>
             </div>
-        </div>
+        </div> -->
 
         <div class="form-group"> 
           <div class='searchContainer'>
@@ -86,6 +86,8 @@
             </div>
       
         </div>
+
+        
         <!-- This is the div for the leaflet map -->
       <!-- <div id="mapid"></div> -->
 
@@ -99,6 +101,27 @@
         Weather Forecast
         <div id="weatherResults"></div>
       </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Error</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              Please enter a valid zip code
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- modal done -->
 
 
    
@@ -116,9 +139,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
     <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
     <script src="assets/js/app.js"></script>
-  
-  <svg xmlns="http://www.w3.org/2000/svg" width="156" height="280" viewBox="0 0 156 280" preserveAspectRatio="none" style="display: none; visibility: hidden; position: absolute; top: -100%; left: -100%;"><defs><style type="text/css"></style></defs><text x="0" y="14" style="font-weight:bold;font-size:14pt;font-family:Arial, Helvetica, Open Sans, sans-serif">156x280</text></svg></body>
-  <script src ='assets/js/app.js'></script>
+    <script src ='assets/js/app.js'></script>
 
 </body>
   </html>

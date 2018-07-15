@@ -18,6 +18,52 @@ $(document).ready(function(){
 var queryURL = 'http://api.openweathermap.org/data/2.5/weather?zip=';
             var APIKey = '&units=imperial&APPID=8ad513190a2f28456f8d69724674498c';
 
+
+//Values from home page dropdown
+categoryValue = "";
+$('.catVal').on('click', function(event){
+	console.log(event);
+    categoryValue = $(this).text();
+    console.log("Category = " + categoryValue);
+});
+
+
+var zipcodeValue = "";
+$('#query').on('change', function(event){
+    zipcodeValue = $(this).val();
+	console.log(event);
+	console.log("Zipcode = " + zipcodeValue);
+});
+
+
+//Eventful API logic
+var APIKey = "pWNMRCZCjh9HB4nj";
+var keyword = categoryValue;
+var pageNumber = 1;
+var pageSize = 6;
+var zipcode = zipcodeValue;
+var date = "Future"
+var queryURL = "https://api.eventful.com/json/events/search?app_key=" + APIKey + 
+	"&keywords=" + keyword +
+	"&page_number=" + pageNumber +
+	"&date=" + date +
+	"&page_size=" + pageSize+
+	"&location=" + zipcode;
+
+$.ajax({
+	url: "https://safe-headland-27088.herokuapp.com/" + queryURL,
+	method: "GET",
+	"async" : true,
+	"crossDomain" : true
+}).then(function(response) {
+
+var results = JSON.parse(response);
+	console.log(results);
+
+//END Eventful API logic
+
+
+
 //Create a function that will generate an HTML string 
 //And then add that string to the page
 function createHTML(zip, tempValue, humidityValue, minTempValue, maxTempValue){
@@ -45,7 +91,9 @@ var searchWeather = function(zip){
 		error: function(data){
 			console.log("error");
 			console.log(data.status);
-			alert("Please enter a valid zip code");
+			/*alert("Please enter a valid zip code");*/
+			$('#myModal').modal('show');
+			
 		},
 		success: function(data){
 			console.log("success");
@@ -106,4 +154,4 @@ var searchWeather = function(zip){
 		}
 	});
 });
-
+});

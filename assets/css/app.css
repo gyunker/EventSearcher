@@ -14,11 +14,13 @@ header {
 .dropdown{
     display: inline;
 }
-.container-3 {
-    max-width: 15rem;
-    border-style: solid !important;
-    border-color: #d3931c !important;
-    border-radius: 10px;
+
+.row{
+  align-content: center;
+}
+
+.container-4 {
+        
     box-shadow: 0 15px 12px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(248, 245, 245, 0.19);
     text-align: center;
     padding-bottom: 20px;

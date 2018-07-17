@@ -90,8 +90,8 @@ footer p {
 
 
 body {
-    /* background: url("../images/test1.jpg") no-repeat center center fixed; */
-    background: url("/Users/shoaibnaeem93/Desktop/test1.jpg") no-repeat center center fixed;
+     background: url("../images/test1.jpg") no-repeat center center fixed; 
+    
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;

@@ -1,5 +1,5 @@
 /* This is the leaflet library */
-var mymap = L.map('mapid').setView([51.505, -0.09], 13);
+var mymap = L.map('mapid').setView([37.34, -121.89], 13);
 
 L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
@@ -9,4 +9,6 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={
     accessToken: 'pk.eyJ1Ijoic2hhbGx5ZyIsImEiOiJjampna250YnkwMWI5M3ZzNGJwcmpxOWQ1In0.921JpJzWVBluf1MAzRmtzA'
 }).addTo(mymap);
 
-var marker = L.marker([51.5, -0.09]).addTo(mymap);
+var marker = L.marker([37.34, -121.89]).addTo(mymap)
+.bindPopup('EventSearcher Headquarters')
+    .openPopup();

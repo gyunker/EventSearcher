@@ -1,40 +1,38 @@
-function searchEventByCategory(){
-    var category = $("select#category").attr('value');
-    console.log(category);
+function run(){
+    var location = $('#location').val().trim();
+    var dateRange = $('#start_date').val().trim();
+    var keyboard = $('#keywords').val().trim();
+    var query = parseQuery($('#category').val(), location, dateRange, keyboard)
+    eventfulApi.search(query);
+
+    //Execute the Weather API call with the 'newSearchTerm' string as its argument
+
+    $(".loading").hide()
 }
 
 $(document).ready(function () {
+    $("#search").on("click", function(e) {
+        e.preventDefault();
+        $(".loading").show()
 
-    //Values from home page dropdown
-    // categoryValue = "";
-    // $('select').on('change',searchEventByCategory).change( searchEventByCategory());
-    $(document).on("click", "select#category", function(){
-        console.log($(this).val())
+        run()
+        $(".loading").hide()
+        return false;
     })
 
-    var zipcodeValue = "";
-    $('#query').on('change', function (event) {
-        zipcodeValue = $(this).val().trim();
-        console.log("Zipcode = " + zipcodeValue);
-        var query = "&location=" + zipcodeValue
-        eventfulApi.search(query);
+
+    $('#location').on('change', function (event) {
+        // run()
+        //Execute the Weather API call with the 'newSearchTerm' string as its argument
+        var location = $('#location').val().trim();
+        searchWeather(location);
+        $("#location").blur();
     });
-
-     $('#search').on('click', function (event) {
-         var zipcodeValue = $('#location').val().trim();
-         var category = $('#category').attr('id')
-    
-         console.log("Zipcode = " + zipcodeValue);
-         var query = "&location=" + zipcodeValue + "&c=" + category
-         eventfulApi.search(query);
-     });
-
 
     var queryURL = 'http://api.openweathermap.org/data/2.5/weather?zip=';
     var APIKey = '&units=imperial&APPID=8ad513190a2f28456f8d69724674498c';
-
-//Create a function that will generate an HTML string
-//And then add that string to the page
+    //Create a function that will generate an HTML string
+    //And then add that string to the page
     function createHTML(zip, tempValue, humidityValue, minTempValue, maxTempValue) {
         var weatherClass;
 
@@ -61,6 +59,7 @@ $(document).ready(function () {
                 console.log("error");
                 console.log(data.status);
                 $('#myModal').modal('show');
+                // alert("Please enter a valid zip code!");
             },
             success: function (data) {
                 console.log("success");
@@ -73,14 +72,11 @@ $(document).ready(function () {
                     return;
                 }
 
-                $("#query").val('');
-
                 var theZip = data.name || '????';
                 var theTemp = Math.round(data.main.temp) || '????';
                 var theHumidity = data.main.humidity || '????';
                 var minTemp = Math.round(data.main.temp_min) || '???';
                 var maxTemp = Math.round(data.main.temp_max) || '???';
-
 
                 //Call a function that will create an HTML string & add it to the page
                 createHTML(
@@ -94,20 +90,7 @@ $(document).ready(function () {
         });
     };
 
-//Code to be executed once the page has fully loaded
-
-
-    //Use jQuery to assign a (callback) function to occur when the 'search' button is clicked
-    $("#search").on('click', function () {
-        console.log("Clicked search");
-        //Use jQuery to get the value of the 'query' input box
-        var newSearchTerm = $("#location").val();
-        console.log(newSearchTerm);
-        //Execute the Weather API call with the 'newSearchTerm' string as its argument
-        searchWeather(newSearchTerm);
-        $("#search").blur();
-    });
-
+    //Code to be executed once the page has fully loaded
     //What if someone just wants to click "ENTER"???
     //Use jQuery to assign a (callback) function to occur when enter is pressed
     //This will ONLY work when the '#query' input box is active

@@ -46,6 +46,7 @@ class Card {
         this.venue_address = event.venue_address
         this.city = event.city_name
         this.region_abbr = event.region_abbr
+        this.url = event.url
     }
     header(){
         // <header class="card-header">
@@ -62,7 +63,11 @@ class Card {
             text: moment(this.start_time).format('MMMM Do, h:mm a')})
         $timeVenue.append(date)
         $header.append($timeVenue)
-        $header.append($("<h4>").text(this.title))
+        var linkTo = $('<a>', {
+            href: this.url,
+            target: "_blank",
+        }).append( $("<h4>").text(this.title))
+        $header.append(linkTo)
         return $header
 
     }
@@ -82,7 +87,12 @@ class Card {
             "data-height": mediumImage.height,
             style: "width: 100%; height: 100%; display: block;"
         })
-        return img
+        var linkTo = $('<a>', {
+            href: this.url,
+            target: "_blank"
+        }).append(img)
+
+        return linkTo
     }
     cardBody(){
         var cardBody = $("<div>").addClass("card-body bg-light")
@@ -103,7 +113,7 @@ class Card {
         var venue = this.venue_name + ", " + this.city + ", " + this.region_abbr
         var $cardFooter = $('<div>').addClass('card-footer')
         var $small = $('<small>').addClass("text-mutted").text(venue)
-        var $tags = $('<div>').addClass("tags text-mutted").text("#music")
+        var $tags = $('<div>').addClass("tags text-mutted")
         $cardFooter.append($small)
         $cardFooter.append($tags)
         return $cardFooter
@@ -123,16 +133,3 @@ class Card {
     }
 }
 
-//
-// function displayCardDeck(){
-//     var $cardDeck = $('.events-grid')
-//     events = [event1, event2, event3]
-//
-//     events.forEach(function(event){
-//         var cardObj = new Card(event);
-//         $cardDeck.append(cardObj.createCard())
-//     })
-// }
-// $(document).ready(function() {
-//     displayCardDeck()
-// })

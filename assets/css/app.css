@@ -92,3 +92,22 @@ a.agile_twitter:hover {
     border: 1px solid #1da1f2;
 }
 
+.loading {
+    display: none;
+}
+
+/*Card*/
+.card-img {
+    width: 100%;
+    border-radius: calc(.25rem - 1px);
+    transition: all .2s ease-in-out;
+}
+
+.card-meta {
+    color: #fff;
+}
+
+.card a:not(.btn) {
+    color: inherit;
+    text-decoration: none;
+}

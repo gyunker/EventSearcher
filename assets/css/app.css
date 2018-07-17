@@ -1,4 +1,4 @@
-html,body{
+html, body {
     height: 100%;
     margin: 0%;
     background: url("../images/test1.jpg") no-repeat center center fixed;
@@ -16,30 +16,30 @@ header {
     border-width: 5px;
 }
 
-.dropdown{
+.dropdown {
     display: inline;
 }
 
-.row{
-  align-content: center;
+.row {
+    align-content: center;
 }
 
 .jumbotron {
-  background: rgba(255, 255, 255, 0.0001);
+    background: rgba(255, 255, 255, 0.0001);
 }
 
 .container-main {
-  background-color: white;
-  border-radius: 10px;
-  text-align: center;
-  padding-bottom: 22px;
-  padding-top: 15px;
-  background: rgba(227, 236, 255, 0.85); 
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+    padding-bottom: 22px;
+    padding-top: 15px;
+    background: rgba(227, 236, 255, 0.85);
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-  
+
 }
 
 .container-4 {
@@ -48,18 +48,12 @@ header {
     padding-top: 10px;
     color: #d3931c !important;
     font-weight: bold;
-    
+
 }
 
 #weatherResults {
     color: black !important;
-  
 }
-
-/*.h3-browse {*/
-/*text-align: left;*/
-/*font-size: 20px;*/
-/*}*/
 
 #footer {
     background: rgb(49, 49, 49);
@@ -72,26 +66,29 @@ header {
     border-width: 5px;
 }
 
-.w3layouts-foot ul li{
-display:inline-block;
+.w3layouts-foot ul li {
+    display: inline-block;
 }
+
 .w3layouts-foot ul li a {
-  width: 32px;
-  height: 32px;
-  color: #fff;
-  border: 1px solid #fff;
-  text-align: center;
-  display: inline-block;
-  font-size: 18px;
-  line-height: 32px;
-  border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    color: #fff;
+    border: 1px solid #fff;
+    text-align: center;
+    display: inline-block;
+    font-size: 18px;
+    line-height: 32px;
+    border-radius: 50%;
 }
-a.w3_agile_facebook:hover{
-background:#3b5998;
- border: 1px solid #3b5998;
+
+a.w3_agile_facebook:hover {
+    background: #3b5998;
+    border: 1px solid #3b5998;
 }
-a.agile_twitter:hover{
-background:#1da1f2;
- border: 1px solid #1da1f2;
+
+a.agile_twitter:hover {
+    background: #1da1f2;
+    border: 1px solid #1da1f2;
 }
 

@@ -34,29 +34,29 @@
 </header>
 
 <section class="jumbotron text-center">
-    <div class="container">
+    <div class="container-main col-md-12  justify-content-center">
         <h2 class="jumbotron-heading">Find Your Next Experience</h2>
         <p class="lead text-muted">What type of event are you looking for?</p>
-        <div class="row" align= "center">
+        <div class="row justify-content-center">
                
-            <div class="col-md-12 center-block" >
-                <div class="form-inline mt-2 mt-md-0">
+            <div class="col-md-12 justify-content-center" >
+                <div class="form-inline mt-2 mt-md-0 justify-content-center">
                     <form class="form-inline mt-2 mt-md-0">
                         <!--Eventful categories-->
                         <div class="mr-3" id="categories"></div>
                         <!--End Eventful categories-->
-                        <div class="dropdown mr-3 date">
+                        <!--<div class="dropdown mr-3 date">
                             <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="Dates" data-toggle="dropdown"
                                aria-haspopup="true" aria-expanded="false">
                                 Dates
-                            </a>
+                            </a> 
                             <div class="dropdown-menu" aria-labelledby="dates">
                                 <div class="form-group">
                                     <label for="start_date" id="startDateSearch">Date</label>
                                     <input type="date" id="start_date" class="form-control">
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                         <div class='searchContainer'>
                             <input id="location" class="form-control mr-sm-2" type="text" placeholder="Enter Zip Code" aria-label="Search">
                             <button id="search" class="btn btn-outline-success my-2 my-sm-0" type="submit">
@@ -97,6 +97,8 @@
         </div>
     </div>
     <!-- modal done -->
+
+<!--cards for events listed-->
 </section>
 <div id="info"></div>
 <section class="events">
@@ -105,11 +107,24 @@
         </div>
     </div>
 </section>
-<div class="fixed-bottom" id="footer">
-    <footer class="footer">
-        <div class="container">
-            <p> &copy; 2018 p1-csgs. All Rights Reserved. </p>
 
+<!--footer-->
+
+<div class="fixed-bottom" id="footer">
+        <div class="footer-botm">
+                <div class="container">
+                    <div class="w3layouts-foot">
+                        <ul> 
+                            <p> &copy; 2018 p1-csgs. All Rights Reserved. </p>
+                            <li><a href="#" class="w3_agile_facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                            <li><a href="#" class="agile_twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                           
+                        </ul>
+                    </div>                    
+                </div>
+            </div>
+    <footer class="footer">      
+           
     </footer>
 </div>
 

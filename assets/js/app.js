@@ -20,14 +20,14 @@ $(document).ready(function () {
         eventfulApi.search(query);
     });
 
-    // $('#search').on('click', function (event) {
-    //     var zipcodeValue = $('#location').val().trim();
-    //     var category = $('#category').attr('id')
-    //
-    //     console.log("Zipcode = " + zipcodeValue);
-    //     var query = "&location=" + zipcodeValue + "&c=" + category
-    //     eventfulApi.search(query);
-    // });
+     $('#search').on('click', function (event) {
+         var zipcodeValue = $('#location').val().trim();
+         var category = $('#category').attr('id')
+    
+         console.log("Zipcode = " + zipcodeValue);
+         var query = "&location=" + zipcodeValue + "&c=" + category
+         eventfulApi.search(query);
+     });
 
 
     var queryURL = 'http://api.openweathermap.org/data/2.5/weather?zip=';

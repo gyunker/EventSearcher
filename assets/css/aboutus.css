@@ -2,6 +2,7 @@ html,body{
     height: 100%;
     margin: 0%;
 }
+
 .dropdown{
     display: inline;
 }
@@ -14,22 +15,24 @@ html,body{
 }
 
 #index {
-    /*background: url("../images/test1.jpg") no-repeat center center fixed;*/
+    background: url("../images/test1.jpg") no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    
 }
 .jumbotron {
     padding-top: 6rem;
     padding-bottom: 6rem;
     margin-bottom: 0;
     background-color: #fff;
-    /* background: url("../images/test1.jpg") no-repeat center center fixed; */
+    background: url("../images/test1.jpg") no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    
 }
 
 .jumbotron p:last-child {
@@ -42,11 +45,14 @@ html,body{
 
 .jumbotron .container {
     max-width: 40rem;
+    
 }
+
 .form-group {
     float: right;
     clear: both;
     margin-left: -10px;
+    margin-bottom: 0%;
 }
 
 .h3-browse {
@@ -57,30 +63,45 @@ html,body{
 #footer {
     background: rgb(49, 49, 49);
     padding-top: 1%;
-    position: fixed;;
+    position: fixed;
     text-align: center;
     color: white;
     border-top-style: solid;
     border-top-color: rgb(83, 82, 82);
     border-width: 5px;
+    height: 110px;
 }
 
-footer p {
-    position: relative;
-    text-align: center;
+.w3layouts-foot ul li{
+display:inline-block;
 }
-
-.footer {
-    text-align: center;
+.w3layouts-foot ul li a {
+  width: 32px;
+  height: 32px;
+  color: #fff;
+  border: 1px solid #fff;
+  text-align: center;
+  display: inline-block;
+  font-size: 18px;
+  line-height: 32px;
+  border-radius: 50%;
+}
+a.w3_agile_facebook:hover{
+background:#3b5998;
+ border: 1px solid #3b5998;
+}
+a.agile_twitter:hover{
+background:#1da1f2;
+ border: 1px solid #1da1f2;
 }
 
 #about-section2 {
     color: black;
     background: white;
-    opacity: 2.0;
     font-size: 20px;
     font-weight: bold;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
 }
 
 #mapid{
@@ -91,7 +112,6 @@ footer p {
 
 body {
      background: url("../images/test1.jpg") no-repeat center center fixed; 
-    
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -114,12 +134,13 @@ body {
     margin-top: auto;
     padding-right: 15px;
     padding-top: 25px;
+    background: rgba(255, 254, 254, 0.85);
 }
 
 .main-container {
     background-color: white;
     opacity: 0.85;
-    padding: 40px;
+    padding: 40px;  
 }
 
 .contact-location{
@@ -128,7 +149,7 @@ body {
     padding: 30px;
     box-shadow: 0 8px 45px 0 rgba(0,0,0,0.22);
     height: 100%;
-    margin: auto;
+    margin-bottom: 9%;
 }
 
 .contact-form{

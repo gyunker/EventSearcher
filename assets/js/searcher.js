@@ -87,7 +87,7 @@ var eventfulApi = {
                     console.log( response );
                 }else{
                     if(response["events"] === null){
-                        alert("Search again")
+                        $('#searchModal').modal('show');
                     }else{
                         if(!!response["events"]) {
                             console.log(response["events"])

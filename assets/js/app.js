@@ -29,7 +29,7 @@ $(document).ready(function () {
         $("#location").blur();
     });
 
-    var queryURL = 'http://api.openweathermap.org/data/2.5/weather?zip=';
+    var queryURL = 'https://api.openweathermap.org/data/2.5/weather?zip=';
     var APIKey = '&units=imperial&APPID=8ad513190a2f28456f8d69724674498c';
     //Create a function that will generate an HTML string
     //And then add that string to the page

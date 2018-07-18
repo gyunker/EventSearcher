@@ -3,10 +3,14 @@ function parseQuery(category, zipCode, dateRange, keyboard){
 
     var query = "&date=" + dateRange
 
-    if(_isEmpty(zipCode)){
-        query += "&location=" + "94110";
-    }else{
-        query +=  "&location=" + zipCode;
+    // if(_isEmpty(zipCode)){
+    //     query += "&location=" + "94110";
+    // }else{
+    //     query +=  "&location=" + zipCode;
+    // }
+
+    if(!(_isEmpty(zipCode))) {
+        query += "&location=" + zipCode;
     }
     if(_isEmpty(dateRange)){
         query += "&date=Future"
@@ -26,9 +30,8 @@ var eventfulApi = {
     apiKey: 'pWNMRCZCjh9HB4nj',
     url: "http://api.eventful.com/json",
     urlSearch: 'https://api.eventful.com/json/events/search?',
-    limit: '10',
     pageNumber: 1,
-    pageSize: 6,
+    pageSize: 9,
     getCategories: function() {
         var listCategories = "http://api.eventful.com/json/categories/list?app_key=xhL49Vr4wmqm32cg"
         $.ajax(  "https://safe-headland-27088.herokuapp.com/" + listCategories, {
@@ -144,41 +147,6 @@ function displayCategories(){
 
 $(document).ready(function() {
     displayCategories()
-
-    // $("#search").on("click", function(e) {
-    //     e.preventDefault();
-    //     // $(".loading").show()
-    //
-    //     var location = $('#location').val().trim();
-    //     var dateRange = $('#start_date').val().trim();
-    //     var keyboard = $('#keywords').val().trim();
-    //     var query = parseQuery($('#category').val(), location, dateRange, keyboard)
-    //     eventfulApi.search(query);
-    //     // $(".loading").hide()
-    //     return false;
-    // })
-
-    if ("geolocation" in navigator) {
-        /* geolocation is available */
-    //    set zipcode and map
-    } else {
-        /* geolocation IS NOT available */
-    //    set default bay area code
-    }
-
-
-    navigator.geolocation.getCurrentPosition(function(position) {
-        console.log(position)
-        // do_something(position.coords.latitude, position.coords.longitude);
-    });
-
-
-    var watchID = navigator.geolocation.watchPosition(function(position) {
-        console.log(position)
-        // console.log(position.coords.latitude + " " + position.coords.longitude);
-
-    });
-
 })
 
 

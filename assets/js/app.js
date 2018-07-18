@@ -49,7 +49,6 @@ $(document).ready(function () {
 
 //Create a function that will execute the Weather AJAX call
     var searchWeather = function (zip) {
-        console.log(zip)
         var searchURL = queryURL + zip + APIKey;
         $.ajax({
             url: searchURL,

@@ -75,6 +75,7 @@ class Card {
         // <img class="card-img-top" alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;" src=" " >
         if(_isEmpty(this.image)){
             console.log('Image is Null')
+            var url = "assets/images/image.png"
             return ""
 
         }
